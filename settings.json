@@ -1,0 +1,6 @@
+{
+  "debug_mode": false,
+  "host": "localhost",
+  "domain": ".multiverse.dev",
+  "port": 3000
+}
