@@ -2,10 +2,10 @@ var http = require('http');
 var url = require('url');
 var settings = require('./settings.json')
 
-function start(router){
+function start(router, handle){
 	function onRequest(request, response){
 		var pathname = url.parse(request.url).pathname;
-		router(pathname);
+		router(handle, pathname);
 		response.writeHead(200, {'Content-Type': 'text/plain'});
 		response.write('Hellow World');
 		response.end();
